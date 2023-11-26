@@ -218,7 +218,8 @@ def getsolutionfromfittests(cities_coordinates, tourmanager):
     # n_generations = 100 
     n_generations = int(2 ** ((n_cities + 3.5) / 3.5)) + n_cities
 
-    random.seed(200)
+    # random.seed(200) # not bed
+    random.seed(300)
 
     # Load the map
     map_original = cv2.imread("map_Paris.png")
