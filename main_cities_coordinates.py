@@ -219,7 +219,7 @@ def getsolutionfromfittests(cities_coordinates, tourmanager):
     n_generations = int(2 ** ((n_cities + 3.5) / 3.5)) + n_cities
 
     # random.seed(200) # not bed
-    random.seed(300)
+    # random.seed(300)
 
     # Load the map
     map_original = cv2.imread("map_Paris.png")
@@ -263,31 +263,31 @@ def getsolutionfromfittests(cities_coordinates, tourmanager):
                 pt1=(fittest[j - 1].x, fittest[j - 1].y),
                 pt2=(fittest[j].x, fittest[j].y),
                 color=(255, 0, 0),
-                thickness=3,
+                thickness=5,
                 lineType=cv2.LINE_AA,
             )
 
         generation_text = "Generation: {0}, n_cities : {1}".format(i + 1,n_cities)
         cv2.putText(
             map_result,
-            org=(10, 25),
+            org=(10, 70),
             text=generation_text,
             fontFace=cv2.FONT_HERSHEY_SIMPLEX,
-            fontScale=0.7,
+            fontScale=2.7,
             color=0,
-            thickness=1,
+            thickness=3,
             lineType=cv2.LINE_AA,
         )
 
         distance_text = "Distance: %.2fkm" % fittest.getDistance()
         cv2.putText(
             map_result,
-            org=(10, 50),
+            org=(10, 150),
             text=distance_text,
             fontFace=cv2.FONT_HERSHEY_SIMPLEX,
-            fontScale=0.7,
+            fontScale=2.7,
             color=0,
-            thickness=1,
+            thickness=3,
             lineType=cv2.LINE_AA,
         )
         # print('generation : {}, distance : {}, Solution : {} !'
@@ -319,7 +319,7 @@ if __name__ == "__main__":
 
     start_fittest_count = 4
     for i in range(n_cities):
-        x = random.randint(200, 2200)
+        x = random.randint(200, 2300)
         y = random.randint(200, 1400)
         tourmanager.addCity(City(x=x, y=y))
         cities_coordinates.append((x, y))
