@@ -1,6 +1,6 @@
 # Traveling Salesman Problem
 
-Solve TSP using genetic algorithm
+## Solve TSP using genetic algorithm
 
 ### 거리를 시간으로 변환 리스트 : 
 [3.59281904 3.66893817 3.66958356 3.67909036 4.27796074 4.30886578
